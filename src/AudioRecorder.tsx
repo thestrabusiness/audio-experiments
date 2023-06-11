@@ -103,14 +103,9 @@ const AudioRecorder: React.FC<AudioRecorderProps> = () => {
     }
   };
 
-  const isRecording = recordingState === RecordingState.Recording;
-  const doneRecording = recordingState === RecordingState.Recorded;
-
-  const displayWaveform = isRecording || doneRecording;
-
   return (
     <div>
-      {displayWaveform && <RecordingWaveform stream={currentStream} />}
+      <RecordingWaveform stream={currentStream} />
       <div className="flex flex-col justify-center items-center">
         <div
           className="rounded-lg bg-blue-300 py-2.5 p-4 mb-2"

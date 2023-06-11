@@ -89,7 +89,11 @@ const RecordingWaveform: React.FC<{ stream: MediaStream | null }> = ({
     }
   }, [audioSamples]);
 
-  return <svg ref={svgRef} width="800" height="300" viewBox={`0 0 800 300`} />;
+  return (
+    <div className="border-t-2 border-b-2 mb-5">
+      <svg ref={svgRef} width="800" height="300" viewBox={`0 0 800 300`} />
+    </div>
+  );
 };
 
 export default RecordingWaveform;
